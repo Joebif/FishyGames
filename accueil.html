@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishyGames</title>
+
+    <!-- Lien vers Font Awesome (ajoutez ceci si vous ne l'avez pas déjà fait) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="commun.css">
+    <link rel="stylesheet" href="accueil.css">
+</head>
+
+
+<body>
+
+    <header>
+        <h1>FishyGames</h1>
+    </header>
+
+    <div class="content">
+        <!-- Contenu de la page -->
+        <p></p>
+    </div>
+
+    <nav>
+        <a href="accueil.html"><i class="fas fa-home"></i>Accueil</a>
+        <a href="jeux.html"><i class="fas fa-gamepad"></i>Jeux</a>
+        <a href="manga.html"><i class="fas fa-book"></i>Manga</a>
+        <a href="ia.html"><i class="fas fa-brain"></i>IA</a>
+        <a href="proxy.html"><i class="fas fa-globe"></i>Proxy</a>
+        <a href="code.html"><i class="fas fa-code"></i>Code</a>
+        <a href="réseaux.html"><i class="fa-brands fa-youtube"></i>Réseaux</a>
+        <a><form action="https://www.google.com/search" method="GET" target="_blank"><label for="searchQuery"></label><input  type="text" id="searchQuery" name="q" placeholder="Recherche..."></form></i></a>
+    </nav>
+
+
+    <div class="cube">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face right"></div>
+        <div class="face left"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+        new Crate({
+          server: '1201500224334594058',
+          channel: '1201500270140588093',
+        })
+      </script>
+
+
+<div id="widget"></div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            const joursSemaine = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+            const mois = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+
+            const date = `${joursSemaine[now.getDay()]} ${now.getDate()} ${mois[now.getMonth()]} ${now.getFullYear()}`;
+
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            const dateString = `  ${date}`;
+
+            document.getElementById('widget').innerHTML = `${timeString}<br>${dateString}`;
+        }
+
+        // Mettre à jour l'horloge toutes les secondes
+        setInterval(updateClock, 1000);
+
+        // Appeler la fonction une fois pour afficher l'heure initiale
+        updateClock();
+    </script>
+</body>
+</html>

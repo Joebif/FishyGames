@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #fdf0f0;
+    padding: 10px;
+    position: fixed;
+    bottom: 100px; /* Décollé de 10px du bas de la page */
+    width: max-content; /* Largeur de 80% de la page */
+    border-radius: 20px; /* Coins arrondis */
+    transform: translateX(-50%);
+    left: 50%;
+    text-align: center;
+    position: fixed;
+}
+
+nav form {
+    display: inline-block;
+}
+
+nav a {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    padding: 10px;
+    margin: 0 5px;
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+    color: #3498db; /* Couleur du texte par défaut */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Animation de transition */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Souligner au survol */
+    color: #e74c3c; /* Changer la couleur au survol */
+}
+
+nav i {
+    margin-right: 5px;
+}
+
+/* Style optionnel pour le contenu de la page */
+.content {
+    margin-bottom: 100px; /* Ajustement pour éviter que le menu ne recouvre le contenu */
+}
+
+#searchQuery {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fdf0f0;
+    color: #3498db;
+    font-size: 20px;
+    width: 110px;
+}
+
+input::placeholder {
+    color: #3498db;
+    font-size: 20px;
+}
+
+p {
+    font-size: 50px;
+    text-align: center;
+    color: #e74c3c;
+}
+
+p2 {
+    
+}
